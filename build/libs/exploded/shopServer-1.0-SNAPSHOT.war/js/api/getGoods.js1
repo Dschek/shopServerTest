@@ -1,0 +1,33 @@
+// (function () {
+//     const content = () => {
+//         fetch("getGoods?start=" + start + "&end=" + end).then((response) => {
+//             response.json().then((json) => {
+//                 let goods = ""
+//                 const expand = () => {
+//                     for (let good of json)
+//                         goods += "<figure class=\"goodImage\"><a href=\"/good?id=" + good.id +
+//                             "\" class=\"product-item-photo\"><img class=\"image-additional\" src=\"" + good.picture +
+//                             "\"></a><figcaption><h3 class=\"goodPrice\">" + good.price +
+//                             " Руб.</h3></figcaption></figure>"
+//                     return goods
+//                 }
+//                 let element = document.createElement("div")
+//                 element.innerHTML = expand();
+//                 contentPage.insertAdjacentElement("beforeend", element)
+//                 start += 4
+//                 end += 4
+//             }).catch(errot => document.getElementById("moreGoods").hidden = true)
+//         })
+//     }
+//
+//     const contentPage = document.getElementById("contentPage")
+//     console.log(contentPage == null)
+//     let start = 0;
+//     let end = 4;
+//     content()
+//     const elementPage = document.createElement("div")
+//     const page = "<button type=\"reset\" id=\"moreGoods\" style=\"border-radius: 100%;background: greenyellow;\"> <h1>Еще</h1></button>"
+//     elementPage.innerHTML = page
+//     elementPage.onclick = content
+//     contentPage.insertAdjacentElement("afterend", elementPage)
+// })()

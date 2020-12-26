@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="ERROR" monitorInterval="5" packages="com.compassplus.wae, com.compassplus.ecommerce">
+    <Properties>
+        <Property name="pattern">%date{ISO8601} [SID=%X{sessionId}] %logger [%5level] %message%exception%n</Property>
+    </Properties>
+    <Appenders>
+        <RollingRandomAccessFile name="LogFile" fileName="/Users/arudin/work/logs/tmp/log.txt" filePattern="/Users/arudin/work/logs/tmp/log.txt.%d{MM-dd-yyyy}" ignoreExceptions="false">
+            <PatternLayout pattern="${pattern}"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy/>
+            </Policies>
+        </RollingRandomAccessFile>
+    </Appenders>
+    <Loggers>
+        <Root level="ALL">
+            <AppenderRef ref="LogFile"/>
+        </Root>
+        <!--<Logger name="com.compassplus.ecommerce.acs" level="${sys:wae.LogLevel}" additivity="false">
+            <AppenderRef ref="Application"/>
+        </Logger>-->
+    </Loggers>
+</Configuration>

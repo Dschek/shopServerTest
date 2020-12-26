@@ -1,0 +1,21 @@
+li {
+    color: cornflowerblue;
+    display: block;
+    float: left;
+    padding: 2rem;
+    position: relative;
+    text-decoration: none;
+    transition-duration: 0.5s;
+}
+li p, li a{
+    color: #fff;
+    font-size: 34px;
+    min-width: 5rem;
+}
+li:hover {
+    background: red;
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+}

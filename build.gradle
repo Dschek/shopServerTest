@@ -1,0 +1,25 @@
+plugins {
+    id 'war'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'org.hibernate', name: 'hibernate-core', version: '5.4.20.Final'
+    compile group: 'org.hibernate', name: 'hibernate-entitymanager', version: '5.4.20.Final'
+    compile group: 'org.hibernate', name: 'hibernate-validator', version: '6.1.5.Final'
+    compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.21'
+    compile group: 'org.hibernate', name: 'hibernate-hikaricp', version: '5.4.19.Final'
+    providedCompile group: 'javax.servlet', name: 'javax.servlet-api', version: '4.0.1'
+    compile 'org.apache.logging.log4j:log4j-api:2.11.1'
+    compile 'org.apache.logging.log4j:log4j-core:2.11.1'
+    compile 'org.apache.logging.log4j:log4j-web:2.11.1'
+    compile 'com.fasterxml.jackson.core:jackson-core:2.8.6'
+    compile 'com.fasterxml.jackson.core:jackson-annotations:2.8.6'
+    compile 'com.fasterxml.jackson.core:jackson-databind:2.8.6'
+}
